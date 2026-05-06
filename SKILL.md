@@ -9,6 +9,36 @@ allowed-tools: Read
 
 > **The rule:** Brief first, then assets, then prompts. Skipping Phase 1 is the #1 reason AI ads underperform. Garbage in, beautiful-looking garbage out.
 
+## Prerequisites
+
+Before using this playbook, you need two things configured:
+
+**1. Higgsfield MCP — connect Claude to Higgsfield**
+
+Add to your Claude MCP config (`~/.claude/claude_desktop_config.json` or via `claude mcp add`):
+
+```json
+{
+  "mcpServers": {
+    "higgsfield": {
+      "command": "npx",
+      "args": ["-y", "@higgsfield-ai/higgsfield-mcp"],
+      "env": {
+        "HIGGSFIELD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+Get your API key at [higgsfield.ai](https://higgsfield.ai). Full MCP setup docs: `higgsfield.ai/mcp`.
+
+**2. Higgsfield account with credits**
+
+- Seedance 2.0 (12s, 4 variants): ~30–60 credits
+- Soul ID training: ~40 credits (one-time per character)
+- Credits can be purchased at [higgsfield.ai](https://higgsfield.ai)
+
 ## The 6-Phase Pipeline
 
 | Phase | Output | Frequency |
